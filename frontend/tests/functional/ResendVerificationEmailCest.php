@@ -9,7 +9,6 @@ class ResendVerificationEmailCest
 {
     protected $formId = '#resend-verification-email-form';
 
-
     /**
      * Load fixtures before db transaction begin
      * Called in _before()
@@ -35,7 +34,7 @@ class ResendVerificationEmailCest
     protected function formParams($email)
     {
         return [
-            'ResendVerificationEmailForm[email]' => $email
+            'ResendVerificationEmailForm[email]' => $email,
         ];
     }
 
@@ -76,7 +75,7 @@ class ResendVerificationEmailCest
         $I->seeRecord('common\models\User', [
             'email' => 'test@mail.com',
             'username' => 'test.test',
-            'status' => \common\models\User::STATUS_INACTIVE
+            'status' => \common\models\User::STATUS_INACTIVE,
         ]);
         $I->see('Check your email for further instructions.');
     }

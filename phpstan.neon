@@ -1,0 +1,18 @@
+parameters:
+    level: 8
+    paths:
+        - backend/controllers
+        - backend/models
+        - backend/web
+        - frontend/controllers
+        - frontend/models
+        - frontend/web
+        - common/components
+        - common/models
+    checkMissingIterableValueType: false
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+        - '#Access to an undefined property yii\\console\\Application\|yii\\web\\Application::\$[a-zA-Z]#'
+        - '#on an unknown class Yii#'
+        - message: '#.+#'
+          path: common/components/web/ErrorHandler.php

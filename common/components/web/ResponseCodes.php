@@ -144,7 +144,7 @@ class ResponseCodes
         self::CODE_NETWORK_CONNECT_TIMEOUT_ERROR => 'Connect Timeout Error',
     ];
 
-    public static function getMessageByCode($code): string
+    public static function getMessageByCode(int $code): string
     {
         return self::$messages[$code] ?? '';
     }

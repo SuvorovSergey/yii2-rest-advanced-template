@@ -7,7 +7,8 @@
         "yiisoft/yii2": "~2.0.45",
         "yiisoft/yii2-bootstrap5": "~2.0.2",
         "yiisoft/yii2-symfonymailer": "~2.0.3",
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "spatie/data-transfer-object": "^3.9"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
@@ -21,7 +22,9 @@
         "codeception/module-yii2": "^1.1",
         "codeception/module-filesystem": "^2.0 || ^1.1",
         "codeception/verify": "^2.2",
-        "symfony/browser-kit": "^6.0 || >=2.7 <=4.2.4"
+        "symfony/browser-kit": "^6.0 || >=2.7 <=4.2.4",
+        "friendsofphp/php-cs-fixer": "^3.13",
+        "phpstan/phpstan": "^1.9"
     },
     "autoload-dev": {
         "psr-4": {

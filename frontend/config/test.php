@@ -12,7 +12,7 @@ return [
             'cookieValidationKey' => 'test',
         ],
         'mailer' => [
-            'messageClass' => Message::class
-        ]
+            'messageClass' => Message::class,
+        ],
     ],
 ];

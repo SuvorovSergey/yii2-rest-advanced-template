@@ -12,14 +12,13 @@ class SignupFormTest extends \Codeception\Test\Unit
      */
     protected $tester;
 
-
     public function _before()
     {
         $this->tester->haveFixtures([
             'user' => [
                 'class' => UserFixture::class,
-                'dataFile' => codecept_data_dir() . 'user.php'
-            ]
+                'dataFile' => codecept_data_dir() . 'user.php',
+            ],
         ]);
     }
 
@@ -38,7 +37,7 @@ class SignupFormTest extends \Codeception\Test\Unit
         $user = $this->tester->grabRecord('common\models\User', [
             'username' => 'some_username',
             'email' => 'some_email@example.com',
-            'status' => \common\models\User::STATUS_INACTIVE
+            'status' => \common\models\User::STATUS_INACTIVE,
         ]);
 
         $this->tester->seeEmailIsSent();
