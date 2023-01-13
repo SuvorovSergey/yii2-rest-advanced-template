@@ -27,7 +27,7 @@ analyse:
 
 # apply migrations
 migrate:
-	docker exec $(php_container) php yii migrate/up
+	docker exec $(php_container) php yii migrate/up --interactive=0
 # apply migrations on test db
 migrate.test:
 	docker exec $(php_container) php yii_test migrate/up --interactive=0
