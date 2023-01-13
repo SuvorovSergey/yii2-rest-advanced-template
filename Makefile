@@ -35,3 +35,9 @@ migrate.test:
 # run tests
 test: migrate.test
 	docker exec $(php_container) vendor/bin/codecept run
+
+# generate swagger yaml
+swagger.backend:
+	docker compose exec -it $(php_container) vendor/bin/openapi -o swagger/backend/swagger.yaml ./swagger/backend
+swagger.frontend:
+	docker compose exec -it $(php_container) vendor/bin/openapi -o swagger/frontend/swagger.yaml ./swagger/frontend

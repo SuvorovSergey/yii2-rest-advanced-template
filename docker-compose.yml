@@ -46,6 +46,18 @@ services:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASS}
 
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    container_name: app_swagger
+    ports:
+      - "4002:8080"
+    volumes:
+      - ./swagger:/usr/share/nginx/html/doc
+    environment:
+      API_URL: doc/backend/swagger.yaml
+    networks:
+      default:
+
 volumes:
   app_db_data:
 
